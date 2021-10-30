@@ -14,3 +14,8 @@ driver.get("https://www.amazon.in/");
 	}
 
 }
+Problems encountered while deleting resources.
+Could not delete 'C:\Users\Admin\eclipse-workspace\Bookroom\Software\chromedriver.exe'.
+  Problems encountered while deleting files.
+    Could not delete: C:\Users\Admin\eclipse-workspace\Bookroom\Software\chromedriver.exe.
+    C:\Users\Admin\eclipse-workspace\Bookroom\Software\chromedriver.exe

@@ -7,7 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-//plain gold coin 50 gm and veify
+import org.testng.Assert;
+//plain gold coin 50 gm and verify
 public class BlueStone2_1 {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -16,12 +17,18 @@ public class BlueStone2_1 {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.bluestone.com/");
 		driver.manage().window().maximize();
-		Actions a=new Actions(driver);
+		//Actions a=new Actions(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement coins=driver.findElement(By.xpath("//li[@id='goldCoins']"));
-        a.moveToElement(coins).perform();
+        coins.click();      
         Thread.sleep(2000);
-	    driver.findElement(By.xpath("//span[text()='50 gram']")).click();
+	    WebElement coins1=driver.findElement(By.xpath("//span[text()='50']"));
+	    coins1.click();
+	    driver.findElement(By.id("pid_5925")).click();
+	    Thread.sleep(1000);
+	    WebElement selectedgrm=driver.findElement(By.xpath("//span[text()='(50 gram)']"));
+	    Assert.assertEquals(coins1,selectedgrm );
+	    System.out.println("ssdfg");
 	}
 
 }

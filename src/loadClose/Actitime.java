@@ -29,8 +29,7 @@ public class Actitime {
 		pass.sendKeys("manager");
 		WebElement log=driver.findElement(By.id("loginButton"));
 		log.click();*/
+
 	}
 
 }
-//b[contains(.,'admin')]
-//b[contains(.,'manager')]

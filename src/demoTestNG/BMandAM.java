@@ -25,7 +25,8 @@ public class BMandAM {
 	public void tc_1() throws InterruptedException
 	{
 		Thread.sleep(2000);
-		driver.findElement(By.name("q")).sendKeys("java",Keys.ENTER);
+		driver.findElement(By.name("q")).sendKeys("testNG",Keys.ENTER);
+
 		System.out.println("tc1");
 	}
 	@Test
